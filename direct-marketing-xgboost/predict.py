@@ -11,7 +11,7 @@ if __name__ == '__main__':
     )
     # Predict first 10 samples
     input_data = x_test[:10].to_json(orient="split")
-    endpoint = "http://localhost:{}/invocations".format(port)
+    endpoint = "http://127.0.0.1:{}/invocations".format(port)
     headers = {"Content-type": "application/json; format=pandas-split"}
     prediction = requests.post(endpoint, json=json.loads(input_data), headers=headers)
     print(prediction.text)

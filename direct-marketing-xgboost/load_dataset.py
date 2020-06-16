@@ -12,11 +12,11 @@ def load_dataset(path, sep, test_size=0.2, random_state=123):
     x = data.drop(['y_yes'], axis=1)
     y = data['y_yes']
     # Log dataset parameters
-    mlflow.log_param("dataset_path", path)
-    mlflow.log_param("dataset_shape", data.shape)
-    mlflow.log_param("test_size", test_size)
-    mlflow.log_param("random_state", random_state)
-    mlflow.log_param("one_hot_encoding", True)
+    # mlflow.log_param("dataset_path", path)
+    # mlflow.log_param("dataset_shape", data.shape)
+    # mlflow.log_param("test_size", test_size)
+    # mlflow.log_param("random_state", random_state)
+    # mlflow.log_param("one_hot_encoding", True)
     return train_test_split(x, y, test_size=test_size, random_state=random_state)
 
 

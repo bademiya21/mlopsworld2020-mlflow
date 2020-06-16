@@ -3,7 +3,7 @@ import xgboost as xgb
 from load_dataset import load_dataset
 
 if __name__ == '__main__':
-    #mlflow.set_experiment('direct-marketing-xgboost')
+    mlflow.set_experiment('direct-marketing-xgboost')
     with mlflow.start_run(run_name='direct-marketing-xgboost-basic') as run:
         x_train, x_test, y_train, y_test = load_dataset(
             'data/bank-additional-full.csv', ';'
